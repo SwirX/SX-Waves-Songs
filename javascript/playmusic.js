@@ -9,7 +9,7 @@ play[1].addEventListener('click', function(){
 
 play[0].onclick = ()=>{
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "php/getmusicfiles.php", true);
+    xhr.open("GET", "php/getmusicfiles.php", true);
     xhr.onload = ()=>{
       if(xhr.readyState === XMLHttpRequest.DONE){
           if(xhr.status === 200){
