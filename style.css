@@ -1,0 +1,247 @@
+:root{
+    --primarycolor: #222;
+    --secondarycolor: #e8e8e8;
+    --playlistbg: #353535;
+    --red: #FF4B4B;
+    --green: #4BFF4B;
+    --blue: #4B4BFF;
+    --darkred: #AA0606;
+    --darkgreen: #06AA06;
+    --darkblue: #0606AA;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: #111;
+    border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover{
+    border: 5px solid #111;
+}
+::-webkit-scrollbar-track{
+    background: rgba(255 255 255 0.3);
+}
+.light{
+    --primarycolor: #e8e8e8;
+    --secondarycolor: #222;
+}
+.closed{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+body{
+    background: var(--primarycolor);
+    color: var(--secondarycolor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.light {
+    border-radius: 999px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #4cc3e2 10.42%,
+      rgba(94, 199, 227, 0.791579) 27.08%,
+      rgba(113, 204, 229, 0.35) 45.31%,
+      rgba(144, 213, 231, 0.11) 65.1%,
+      rgba(158, 216, 231, 0.02) 78.12%,
+      rgba(177, 221, 233, 0) 95.83%
+    );
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+.menubar{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 125px;
+}
+.menubutton{
+    font-size: large;
+    margin-left: 10px;
+    color: var(--secondarycolor);
+    text-decoration: none;
+    margin: 10px;
+}
+#home{
+    background: var(--secondarycolor);
+    color: var(--primarycolor);
+}
+.profilebtn{
+    border: none;
+    color: var(--secondarycolor);
+    background-color: black;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px;
+}
+.pfp{
+    position: relative;
+    top: 9px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+.playlist{
+    float: left;
+    background: var(--playlistbg);
+    color: var(--secondarycolor);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    height: 250px;
+    width: 200px;
+    margin: 20px;
+    transition: .5s cubic-bezier( 0, 1, 1, 1 );
+}
+.playlist div img{
+    position: relative;
+    left: 1.5vh;
+    height: 175px;
+    width: 175px;
+    border-radius: 8px;
+}
+.playlist div .playlist-title{
+    position: relative;
+    bottom: 20px;
+    left: 5px;
+    font-size: large;
+    font-weight: 600;
+}
+.playlist div .playlist-artists{
+    position: relative;
+    bottom: 35px;
+    left: 5px;
+    color: gainsboro;
+    font-size: small;
+    font-weight: 300;
+}
+.playlist div .playbtn{
+    position: relative;
+    top: -120px;
+    left: 150px;
+    background: transparent;
+    color: transparent;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s cubic-bezier( 0, 1, 1, 1 );
+}
+.playlist div .playbtn:hover{
+    height: 51px;
+    width: 51px;
+    transition: .5s;
+}
+.playbtn > *{
+    position: inherit;
+    left: 35%;
+    top: 30%;
+    font-size: large;
+}
+.playlist:hover{
+    background: #464646;
+}
+.playlist:hover > div .playbtn{
+    /* background: rgb(166,0,255);
+    background: linear-gradient(25deg, rgba(166,0,255,1) 0%, rgba(0,212,255,1) 100%); */
+    background: rgb(131,58,180);
+    background: linear-gradient(25deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    color: var(--secondarycolor);
+    top: -150px;
+}
+/* Search page */
+#searchbar{
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 50px;
+    outline: 2px solid #222;
+}
+.btn{
+    background: #353535;
+    color: var(--secondarycolor);
+    text-decoration: none;
+    font-size: large;
+    border: none;
+    border-radius: 50px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin: 10px;
+    transition: .5s;
+}
+.btn:hover{
+    background: #464646;
+}
+.btn.active{
+    background: var(--secondarycolor);
+    color: var(--primarycolor);
+}
+.track{
+    height: 100px;
+    width: 350px;
+    background: #353535;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.track img{
+    height: 90px;
+    width: 90px;
+    margin: 2.5px;
+    border-radius: 8px;
+}
+.track .title{
+    position: relative;
+    left: 125px;
+    bottom: 105px;
+    font-size: large;
+    font-weight: 600;
+}
+.track .type{
+    position: relative;
+    left: 125px;
+    bottom: 100px;
+    background: #464646;
+    width: min-content;
+    padding: 5px;
+    border-radius: 40px;
+    font-size: small;
+    font-weight: 550;
+}
+
+.track .playbtn{
+    position: relative;
+    top: -120px;
+    left: 300px;
+    background: transparent;
+    color: transparent;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s cubic-bezier( 0, 1, 1, 1 );
+}
+.track .playbtn:hover{
+    height: 46px;
+    width: 46px;
+    transition: .5s;
+}
+.track:hover{
+    background: #464646;
+}
+.track:hover > .playbtn{
+    /* background: rgb(166,0,255);
+    background: linear-gradient(25deg, rgba(166,0,255,1) 0%, rgba(0,212,255,1) 100%); */
+    background: rgb(131,58,180);
+    background: linear-gradient(25deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    color: var(--secondarycolor);
+    top: -150px;
+}
