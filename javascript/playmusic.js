@@ -1,16 +1,29 @@
 const play = document.querySelectorAll('.playbtn');
 
 play[0].addEventListener('click', function(){
-    playsong("G.O.M.D.");
+    playsong("J.Cole", "ForestHillsDrive", "G.O.M.D.");
 });
 play[1].addEventListener('click', function(){
-    playsong('Ozone');
+    playsong("ChaseAtlantic", "ChaseAtlantic", 'Ozone');
 });
 
+play[0].onclick = ()=>{
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "php/getmusicfiles.php", true);
+    xhr.onload = ()=>{
+      if(xhr.readyState === XMLHttpRequest.DONE){
+          if(xhr.status === 200){
+            let data = xhr.response;
+            print(data);
+          }
+      }
+    }
+    xhr.send();
+}
 
 var songplaying = null; //This is where we will store the current playing song
 
-function playsong(song_name){
+function playsong(artist_name, album_name,song_name){
     //settings
     var playing = null;
     if(songplaying==null){ //If a song isn't stored that means that it's not playing and vice versa
@@ -18,7 +31,7 @@ function playsong(song_name){
     }else{
         playing = true;
     }
-    var dir = "./songs/"+song_name+".mp3"; //Here we get the directory of the song
+    var dir = "./songs/"+artist_name+"/"+album_name+"/"+song_name+".mp3"; //Here we get the directory of the song
     var song = new Audio(dir); //Making a new audio element
     if(!playing){ //This runs when no song is playing
         song.play();
