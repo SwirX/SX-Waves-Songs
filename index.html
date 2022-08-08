@@ -10,12 +10,25 @@
 </head>
 <body>
     <div align="right" class="menubar">
-        <button href="#" class="menubutton btn" id="home"><ion-icon name="home-outline"></ion-icon> Home</button>
-        <button href="#" class="menubutton btn" id="search"><ion-icon name="search-outline"></ion-icon> Search</button>
-        <button href="#" class="menubutton btn" id="library"><ion-icon name="library-outline"></ion-icon> Library</button>
+        <button class="menubutton btn" id="home"><ion-icon name="home-outline"></ion-icon> Home</button>
+        <button class="menubutton btn" id="search"><ion-icon name="search-outline"></ion-icon> Search</button>
+        <button class="menubutton btn" id="library"><ion-icon name="library-outline"></ion-icon> Library</button>
         <button class="profilebtn">placeholder</button>
         <img src="https://bit.ly/3p239kI" alt="" class="pfp">
+        <div class="accmore hidden">
+        </div>
     </div><hr width="90%">
+    <!-- PlayingInfo -->
+    <div class="playbar">
+        <!-- <img src="https://bit.ly/3p239kI" alt=""class="album-img"> -->
+        <p class="title-name">placeholder</p>
+        <p class="author-name">placeholder</p>
+        <audio class='currentplaying'src="">Bro your browser is old it doesn't support audios why are you even here -_-</audio>
+        <button class="play-back"><ion-icon name="play-back-outline"></ion-icon></button>
+        <button class="ppbtn"><ion-icon name="pause-outline"></ion-icon></button>
+        <button class="play-forward"><ion-icon name="play-forward-outline"></ion-icon></button>
+        <p class="duration">0:00</p>
+    </div>
     <!-- home page -->
     <div id="homepg">
         <div class="madeforyou">
@@ -23,16 +36,16 @@
             <div class="playlist">
                 <div>
                     <img src="https://images-na.ssl-images-amazon.com/images/I/71iQcMbTpWL._AC_SL1500_.jpg" alt="">
-                    <p class="playlist-title">G.O.M.D.</p>
+                    <p class="playlist-title">Forest Hills Drive</p>
                     <p class="playlist-artists">J.Cole</p>
                     <div class="playbtn"><ion-icon name="play"></ion-icon></div>
                 </div>
             </div>
             <div class="playlist">
                 <div>
-                    <img src="https://bit.ly/3p239kI" alt="">
-                    <p class="playlist-title">Ozone</p>
-                    <p class="playlist-artists">Chase Atlantic</p>
+                    <img src="https://th.bing.com/th/id/OIP.nhqHSR7xInxPU5tC9jDTdQHaHa?pid=ImgDet&rs=1" alt="">
+                    <p class="playlist-title">Don't forget about me, Demos</p>
+                    <p class="playlist-artists">Dominic Fike</p>
                     <div class="playbtn"><ion-icon name="play"></ion-icon></div>
                 </div>
             </div>
@@ -118,13 +131,19 @@
         </div>
         <div class="searchresults">
             <div class="all">
-                <div class="track1">
+                <div class="track">
                     <img src="https://bit.ly/3p239kI" alt="">
                     <p class="title">placeholder</p>
                     <p class="type">Song</p>
                     <div class="playbtn"><ion-icon name="play"></ion-icon></div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- library -->
+    <div id="librarypg" class="closed">
+        <div>
+
         </div>
     </div>
 

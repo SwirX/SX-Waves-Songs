@@ -1,0 +1,42 @@
+{
+    "artists":{
+        "BrunoMars":{
+            "UnorthodoxJukebox":[
+                "Treasure"
+            ]
+        },
+        "ChaseAtlantic":{
+            "ChaseAtlantic":[
+                "Ozone"
+            ]
+        },
+        "DominicFike":{
+            "DontForgetAboutMeDemos":[
+                "Phone Numbers",
+                "3 Nights"
+            ]
+        },
+        "J.Cole":{
+            "ForestHillDrive":[
+                "Intro",
+                "January 28th",
+                "Wet Dreamz",
+                "A Tale of 2 Citiez",
+                "Fire Squad",
+                "St Tropez",
+                "G.O.M.D.",
+                "No Role Modelz"
+            ]
+        },
+        "KidLAROI":{
+            "FuckLove":[
+                "WITHOUT YOU"
+            ]
+        },
+        "RoddyRicch":{
+            "PleaseExcuseMeForBeingAntisocial":[
+                "High Fashion"
+            ]
+        }
+    }
+}
