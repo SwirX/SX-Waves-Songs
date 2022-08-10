@@ -1,19 +1,112 @@
 {
     "artists":{
+        "Adele":[
+            "Fire to the rain"
+        ],
+        "AliGatie":[
+            "Idk",
+            "Its you"
+        ],
+        "ArizonaZervas":{
+            "LivingFacts":[
+            "24",
+            "C u l8r",
+            "Drain me",
+            "FML",
+            "My time",
+            "On ten",
+            "Oh my lord",
+            "Holy trinity"
+        ]},
+        "BringMeTheHorizon":[
+            "Can you feel my heart",
+            "Die4u",
+            "Sleepwalking",
+            "Throne",
+            "Teardops"
+        ],
         "BrunoMars":{
             "UnorthodoxJukebox":[
                 "Treasure"
             ]
         },
-        "ChaseAtlantic":{
-            "ChaseAtlantic":[
-                "Ozone"
+        "ChaliePuth":{
+            "Voicenotes":[
+            "Attention",
+            "How long",
+            "Thats hilarious"
+            ],
+            "NineTrackMind":[
+            "One call away",
+            "We dont talk anymore"
             ]
         },
+        "ChaseAtlantic":{
+            "ChaseAtlantic":[
+                "Angeline",
+                "Consume",
+                "Into it",
+                "Numb to the feeling",
+                "Okay",
+                "Ozone",
+                "STUCKINMYBRAIN",
+                "Swim",
+                "the walls",
+                "Uncomforable"
+            ]
+        },
+        "Dababy":{
+            " BLAMEITONBABY":[
+            "Rockstar"
+        ]},
+        "DJKhaled":{
+            "KHALEDKHALED":[
+            "Greece",
+            "I did it"
+        ]},
         "DominicFike":{
             "DontForgetAboutMeDemos":[
                 "Phone Numbers",
                 "3 Nights"
+            ]
+        },
+        "Drake":{
+            "Views":[
+                "Fair trade",
+                "Fire desire",
+                "In my feelings",
+                "Feel no ways",
+                "Hotline Bling",
+                "One Dance",
+                "Race my mind"
+            ],
+            "TakeCare":[
+                "Doing it wrong"
+            ],
+            "MoreLife":[
+                "Passionfruit"
+            ],
+            "Nothingwasthesame":[
+                "Hold on were going home"
+            ],
+            "DarkLaneDemoTapes":[
+                "Pain 1993"
+            ],
+            "LilDurk":[
+                "Laugh now cry later"
+            ]
+        },
+        "EdSheeran":{
+            "Divide":[
+                "Happier",
+                "Perfect",
+                "Shape of you"
+            ],
+            "Multiply":[
+                "Thinking out loud"
+            ],
+            "Equals":[
+                "Shivers"
             ]
         },
         "J.Cole":{

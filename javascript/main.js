@@ -62,7 +62,7 @@ const moreAccInfo = document.querySelector(".accmore");
 const profilebtn = document.querySelector('.profilebtn');
 if(isSigned==false){
     print("not logged in");
-    const buttons = '<button id="signupbtn">Sign up</button><br><button id="Loginbtn">login</button>';
+    const buttons = '<button id="signupbtn">Sign up</button><br><button id="loginbtn">login</button>';
     moreAccInfo.innerHTML = buttons;
 }else{
     print("logged in")

@@ -277,57 +277,55 @@ body{
     top: 1vh;
     z-index: 1;
 }
-.title-name{
-    position: relative;
-    bottom: 2vh;
+.playbar > *{
+    position: absolute;
+    background: transparent;
+    border: none;
 }
-.author-name{
-    position: relative;
-    bottom: 3vh;
+
+.title-name {
+    bottom: 7vh;
+  }
+  
+.author-name {
+    bottom: 4vh;
 }
-.duration{
-    position: relative;
-    bottom: 15vh;
-    left: 10vw
+  
+.duration {
+    top: 4vh;
 }
 .ppbtn{
     color: var(--secondarycolor);
     font-size: 22px;
     text-align: center;
-    position: relative;
-    left: 22.4vw;
-    bottom: 8vh;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-}
-.ppbtn > *{
-    position: relative;
-    left: .1vw;
+    top: 1vh;
+    left: 30vw;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
 .play-forward{
     color: var(--secondarycolor);
     font-size: 22px;
     text-align: center;
-    position: relative;
-    bottom: 8vh;
-    left: 22.5vw;
-    border: none;
+    top: 1vh;
+    left: 35vw;
     width: 35px;
     height: 35px;
-    background: transparent;
+    cursor: pointer;
 }
 .play-back{
     color: var(--secondarycolor);
     font-size: 22px;
     text-align: center;
-    position: relative;
-    bottom: 8vh;
-    left: 22.8vw;
-    border: none;
+    top: 1vh;
+    left: 25vw;
     width: 35px;
     height: 35px;
-    background: transparent;
+    cursor: pointer;
+}
+.slider{
+    width: 50vw;
+    bottom: 2vh;
+    left: 3vw;
 }
