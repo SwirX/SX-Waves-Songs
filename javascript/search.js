@@ -1,16 +1,75 @@
 let artistsList = [
+    "Adele",
+    "AliGatie",
+    "ArizonaZervas",
+    "BringMeTheHorizon",
     "Bruno Mars",
+    "ChaliePuth",
     "Chase Atlantic",
+    "Dababy",
+    "DJKhaled",
     "Dominic Fike",
+    "Drake",
+    "EdSheeran",
     "J. Cole",
     "Kid LAROI",
     "Roddy Ricch"
 ]
 let songsList = [
+    "Fire to the rain",
+    "Idk",
+    "Its you",
+    "24",
+    "C u l8r",
+    "Drain me",
+    "FML",
+    "My time",
+    "On ten",
+    "Oh my lord",
+    "Holy trinity",
+    "Can you feel my heart",
+    "Die4u",
+    "Sleepwalking",
+    "Throne",
+    "Teardops",
     "Treasure",
+    "Attention",
+    "How long",
+    "Thats hilarious",
+    "One call away",
+    "We dont talk anymore",
+    "Angeline",
+    "Consume",
+    "Into it",
+    "Numb to the feeling",
+    "Okay",
     "Ozone",
+    "Stuckinmybrain",
+    "Swim",
+    "the walls",
+    "Uncomforable",
+    "Rockstar",
+    "Greece",
+    "I did it",
     "3 Nights",
     "Phone Numbers",
+    "Fair trade",
+    "Fire desire",
+    "In my feelings",
+    "Feel no ways",
+    "Hotline Bling",
+    "One Dance",
+    "Race my mind",
+    "Doing it wrong",
+    "Passionfruit",
+    "Hold on were going home",
+    "Pain 1993",
+    "Laugh now cry later",
+    "Happier",
+    "Perfect",
+    "Shape of you",
+    "Thinking out loud",
+    "Shivers",
     "Intro",
     "January 28th",
     "Wet Dreamz",
@@ -23,9 +82,23 @@ let songsList = [
     "High Fashion"
 ]
 let albumsList = [
-    "Unorthodox jukebox",
+    "Living Facts",
+    "Unorthodox Jukebox",
+    "Voicenotes",
+    "Nine Track Mind",
     "Chase Atlantic",
+    "BLAME IT ON BABY",
+    "KHALED KHALED",
     "Dont forget about me Demos",
+    "Views",
+    "Take Care",
+    "MoreLife",
+    "Nothingwasthesame",
+    "DarkLaneDemoTapes",
+    "LilDurk",
+    "Divide",
+    "Multiply",
+    "Equals",
     "Forest hills drive",
     "Fuck love",
     "Please excuse me for being antisocial"
@@ -69,17 +142,7 @@ searchbar.addEventListener('input', function(){
                 errors++;
             }
             if(errors<1){
-                if(found==false){
-                    print("found song: "+song+" with "+errors+" errors");
-                    var resultHTML = '<img src="https://bit.ly/3p239kI" alt=""><p class="title">'+song+'</p><p class="type">Song</p><div class="playbtn"><ion-icon name="play"></ion-icon></div>'
-                    var resultTrack = document.createElement('div');
-                    resultTrack.classList.add('track');
-                    resultTrack.innerHTML = resultHTML;
-                    searchresult.appendChild(resultTrack);
-                    found = true
-                }else{
-                    print(found)
-                }
+                print(song)
             }else{
                 break;
             }
