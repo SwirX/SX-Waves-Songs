@@ -156,12 +156,12 @@ let slider = document.querySelector(".slider");
 const play = document.querySelectorAll('.playbtn');
 let made4u_list = document.querySelector('.madeforyou')
 
-for(i in songInfo['artists']){
-    var playlist = document.createElement("div");
-    playlist.classList.add('playlist');
-    playlist.innerHTML = '<div><img src="https://bit.ly/3p239kI" alt=""><p class="playlist-title">'+i+'</p><p class="playlist-artists">placeholder, placeholder, placeholder...</p><div class="playbtn"><ion-icon name="play"></ion-icon></div></div>'
-    made4u_list.appendChild(playlist);
-};
+//for(i in songInfo['artists']){
+    //var playlist = document.createElement("div");
+    //playlist.classList.add('playlist');
+    //playlist.innerHTML = '<div><img src="https://bit.ly/3p239kI" alt=""><p class="playlist-title">'+i+'</p><p class="playlist-artists">placeholder, placeholder, placeholder...</p><div class="playbtn"><ion-icon name="play"></ion-icon></div></div>'
+    //made4u_list.appendChild(playlist);
+//};
 
 playpausebtn.addEventListener("click", resumesong);
 playnext.addEventListener("click", ()=>{
