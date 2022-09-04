@@ -281,6 +281,7 @@ body{
     position: absolute;
     background: transparent;
     border: none;
+    color: var(--secondarycolor);
 }
 
 .title-name {
@@ -328,4 +329,41 @@ body{
     width: 50vw;
     bottom: 2vh;
     left: 3vw;
+}
+.playing-type{
+    cursor: pointer;
+    font-size: 22px;
+    left: 20vw;
+    top: 1vh;
+    width: 35px;
+    height: 35px;
+}
+.volume{
+    cursor: pointer;
+    font-size: 22px;
+    left: 40vw;
+    top: 1vh;
+    width: 35px;
+    height: 35px;
+}
+.volume-slider {
+    -webkit-appearance: none;
+    width: 90px;
+    background: #111;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+    left: 43vw;
+    top: 2.25vh;
+}
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #00fd0a;
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px #00fd0a;
 }

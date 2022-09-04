@@ -3,11 +3,11 @@ let songInfo = {
         "Adele":[
             "Fire to the rain"
         ],
-        "AliGatie":[
+        "Ali Gatie":[
             "Idk",
             "Its you"
         ],
-        "ArizonaZervas":{
+        "Arizona Zervas":{
             "LivingFacts":[
             "24",
             "C u l8r",
@@ -30,7 +30,7 @@ let songInfo = {
                 "Treasure"
             ]
         },
-        "ChaliePuth":{
+        "Chalie Puth":{
             "Voicenotes":[
             "Attention",
             "How long",
@@ -136,12 +136,17 @@ let songInfo = {
 
 
 let currentsonginfoTemplate = {
-    "title": "",
-    "author": "",
-    "album": "",
+    "title": "Attention",
+    "author": "Charlie Puth",
+    "album": "Voicenotes",
     "timestamp":'0',
     "isPlaying": false,
-    "index": 0
+    "index": 0,
+    "volume":1
+}
+
+if(ls.getItem('currentSongInfo')== null){
+    ls.setItem("currentSongInfo", JSON.stringify(currentsonginfoTemplate));
 }
 // ls.setItem("currentSongInfo", JSON.stringify(currentsonginfoTemplate))
 
@@ -153,15 +158,26 @@ let playpausebtn = document.querySelector('.ppbtn');
 let playnext = document.querySelector('.play-forward');
 let playprevious = document.querySelector('.play-back');
 let slider = document.querySelector(".slider");
+let volumebtn = document.querySelector('.volume');
+let volumeSlider = document.querySelector('.volume-slider');
+let made4u_list = document.querySelector('.madeforyou');
 const play = document.querySelectorAll('.playbtn');
-let made4u_list = document.querySelector('.madeforyou')
 
-//for(i in songInfo['artists']){
-    //var playlist = document.createElement("div");
-    //playlist.classList.add('playlist');
-    //playlist.innerHTML = '<div><img src="https://bit.ly/3p239kI" alt=""><p class="playlist-title">'+i+'</p><p class="playlist-artists">placeholder, placeholder, placeholder...</p><div class="playbtn"><ion-icon name="play"></ion-icon></div></div>'
-    //made4u_list.appendChild(playlist);
-//};
+// Iterate over play buttons and create an event for each one 
+
+for(i in songInfo['artists']){
+    var playlist = document.createElement("div");
+    playlist.classList.add('playlist');
+    playlist.innerHTML = '<div><img src="https://bit.ly/3p239kI" alt=""><p class="playlist-title">'+i+' Mix</p><p class="playlist-artists">'+i+'</p><div class="playbtn" value="'+i+'"><ion-icon name="play"></ion-icon></div></div>'
+    made4u_list.appendChild(playlist);
+};
+
+var play_btns = document.getElementsByClassName('playbtn');
+for(i=0;i<play_btns.length;i++){
+    var btn = play_btns[i];
+    var artist_name = btn.getAttribute('value');
+    playArtist(artist_name);
+}
 
 playpausebtn.addEventListener("click", resumesong);
 playnext.addEventListener("click", ()=>{
@@ -172,10 +188,10 @@ playprevious.addEventListener('click', ()=>{
 });
 
 play[0].addEventListener('click', function(){
-    playAlbum("J.Cole", "ForestHillsDrive", 0);
+    playAlbum("Adele", "21", 0);
 });
 play[1].addEventListener('click', function(){
-    playAlbum("DominicFike", "DontForgetAboutMeDemos", 0);
+    playAlbum("Ali Gatie", "YOU", 0);
 });
 
 window.onload = load;
@@ -228,7 +244,7 @@ function load(){
     var albumV = info.album;
     var titleV = info.title;
     var timestamp = info.timestamp;
-    var dir = "./songs/"+artistV+"/"+albumV+"/"+titleV+".mp3";
+    var dir = "https://swirx.github.io/SX-Waves-Songs/songs/"+artistV+"/"+albumV+"/"+titleV+".mp3";
     songplaying.src = dir;
     songplaying.currentTime = timestamp;
     title.innerHTML = titleV;
@@ -256,6 +272,21 @@ function resumesong(){
         playpausebtn.innerHTML = '<ion-icon name="pause-outline"></ion-icon>';
         info.isPlaying = true;
     }
+    ls.setItem("currentSongInfo", JSON.stringify(info));
+};
+
+// volume
+volumebtn.addEventListener('click', ()=>{
+    volumeSlider.classList.toggle("hidden");
+})
+volumeSlider.addEventListener('change', volume);
+
+function volume(){
+    info = JSON.parse(ls.getItem("currentSongInfo"));
+    var value = slider.value;
+    var newVolume = value/100;
+    songplaying.volume = newVolume;
+    info.volume = newVolume;
     ls.setItem("currentSongInfo", JSON.stringify(info));
 };
 
@@ -344,6 +375,25 @@ function playAlbum(artistName, albumName, i){
         playAlbum(artistName, albumName, i);
     });
 };
+
+// play an artist's songs
+function playArtist(_an){
+    var artists = songInfo.artists;
+    var artist_s_albums = artists[_an];
+    print(artist_s_albums);
+    for(i=0;i<artist_s_albums.length; ){
+        var _album = artist_s_albums[i];
+        playAlbum(_an, artist_s_albums, i);
+        songplaying.addEventListener("ended", function(){
+            if(i<_album.length){
+                i++;
+            }else{
+                i=0;
+            }
+            playAlbum(_an, _album, i);
+        });
+    }
+}
 
 // get the audios's current time
 function getTime(s_obj) {
